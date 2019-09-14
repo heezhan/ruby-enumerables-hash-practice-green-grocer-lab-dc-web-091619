@@ -53,6 +53,6 @@ def checkout(cart, coupons)
   clearance_cart.each do |item, value|
     total += (value[:price] * value[:count])
   end
-  if total > 100
-  total = (total * 0.9) if total > 100 total 
+  total = (total * 0.9) if total > 100
+  return total 
 end
