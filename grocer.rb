@@ -3,13 +3,13 @@ require 'pry'
 def consolidate_cart(cart)
   final_hash = {}
   cart.each do |item_hash|
-    element_name = item_hash.keys[0]
-    if final_hash.has_key?(element_name)
-      final_hash[element_name][:count] += 1 
+    item_name = item_hash.keys[0]
+    if final_hash.has_key?(item_name)
+      final_hash[item_name][:count] += 1 
     else 
-      final_hash[element_name] = {
-        :price => item_hash[element_name][:price],
-        :clearance => item_hash[element_name][:clearance],
+      final_hash[item_name] = {
+        :price => item_hash[item_name][:price],
+        :clearance => item_hash[item_name][:clearance],
         :count => 1
       }
     end
